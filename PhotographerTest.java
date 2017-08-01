@@ -5,20 +5,21 @@ public class PhotographerTest {
 
   Photographer photographer;
   DigitalCamera nikon;
-  AnalogCamera kodak;
+  AnalogCamera sony;
 
   @Before
   public void before(){
   photographer = new Photographer();
-  nikon = new DigitalCamera(); 
-  kodak = new AnalogCamera(); 
+  nikon = new DigitalCamera("Nikon 34T, Noise reduction filter Hi-Resolution" ); 
+  sony = new AnalogCamera("Sony No noise reduction Lo-resolution"); 
   }  
 
 
 @Test
 public void addingCamera(){
   photographer.addCamera(nikon);
-  assertEquals(1, photographer.cameraCount());
+  photographer.addCamera(sony);
+  assertEquals(2, photographer.cameraCount());
 }
 
 @Test
@@ -27,6 +28,12 @@ public void deletingCamera(){
   assertEquals(0, photographer.cameraCount());
 }
 
+@Test
+public void printAllCameras(){
+ photographer.addCamera(nikon);
+ assertEquals("Nikon 34T, Noise reduction filter Hi-Resolution",photographer.printAllCameras());
+
+}
 
 
 }

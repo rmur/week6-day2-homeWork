@@ -20,6 +20,13 @@ class Photographer {
     return this.cameras.size();
   }
 
+  public String printAllCameras(){
+    String hold = "";
+    for (Printable cameraSpaces : this.cameras){
+      hold = hold + cameraSpaces.printDetails();
+    }
+    return hold;
+  }
 
 
 }
