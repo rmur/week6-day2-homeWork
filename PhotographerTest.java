@@ -5,11 +5,13 @@ public class PhotographerTest {
 
   Photographer photographer;
   DigitalCamera nikon;
+  AnalogCamera kodak;
 
   @Before
   public void before(){
   photographer = new Photographer();
-  nikon = new DigitalCamera();  
+  nikon = new DigitalCamera(); 
+  kodak = new AnalogCamera(); 
   }  
 
 
