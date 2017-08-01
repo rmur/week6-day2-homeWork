@@ -1,14 +1,14 @@
 import java.util.*;
 
 class Photographer {
-  private ArrayList<CameraStore> cameras;
+  private ArrayList<Printable> cameras;
 
   public Photographer(){
-    this.cameras = new ArrayList<CameraStore>();
+    this.cameras = new ArrayList<Printable>();
   }
 
 
-  public void addCamera(CameraStore cameraNew){
+  public void addCamera(Printable cameraNew){
    this.cameras.add(cameraNew); 
   }
 
