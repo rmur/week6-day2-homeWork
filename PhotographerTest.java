@@ -35,5 +35,12 @@ public void printAllCameras(){
 
 }
 
+@Test
+public void canPrint() {
+  photographer.addCamera(nikon);
+  assertEquals("Nikon 34T, Noise reduction filter Hi-Resolution", photographer.cameraDetails());
+
+}
+
 
 }

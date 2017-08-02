@@ -23,9 +23,17 @@ class Photographer {
   public String printAllCameras(){
     String hold = "";
     for (Printable cameraSpaces : this.cameras){
-      hold = hold + cameraSpaces.printDetails();
+      hold += cameraSpaces.printDetails();
     }
     return hold;
+  }
+
+  public String cameraDetails(){
+    String details = "";
+    for (int i = 0; i < this.cameras.size() ; i++ ) {
+     details += this.cameras.get(i).printDetails();     
+    }
+    return details;
   }
 
 
